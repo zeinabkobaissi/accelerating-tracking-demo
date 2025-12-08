@@ -1,0 +1,15 @@
+venv
+artifacts
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/
+.env
+logs/
+*.log
+coverage
+htmlcov/
+*.sqlite3
+node_modules/       
+dist/
