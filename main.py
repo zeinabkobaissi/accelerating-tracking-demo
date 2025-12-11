@@ -6,9 +6,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 
+import dagshub 
+
+dagshub_owner = "zeinabkoubaissi33"
+dagshub_repo = "accelerating-tracking-demo"
+dagshub.init(repo_owner=dagshub_owner, repo_name=dagshub_repo,mlflow=True)
 # Enable MLflow autologging (optional)
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
-mlflow.set_experiment("demo_experiment")
+#mlflow.set_tracking_uri("http://127.0.0.1:5000")
+#mlflow.set_experiment("demo_experiment")
   # Adjust if needed
 
 mlflow.sklearn.autolog()
@@ -50,3 +55,4 @@ def train_model():
 
 if __name__ == "__main__":
     train_model()
+
