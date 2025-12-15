@@ -4,4 +4,4 @@ dvc
 dagshub
 fastapi
 uvicorn
-
+pytest
