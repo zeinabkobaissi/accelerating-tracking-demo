@@ -20,11 +20,10 @@ jobs:
 
       
 
-      - name: build and push docker image
-        uses: docker/build-push-action@v4
-        run: |
-          docker build -t tracking-demos:latest .
-          docker tag tracking-demos:latest ${{ secrets.DOCKERHUB_USERNAME }}/tracking-demos:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/tracking-demos:latest
-
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tracking-demos:latest
       
